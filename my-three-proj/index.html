@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Cradle - فيزياء دقيقة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div id="debug"></div>
+    <div class="energy-bar"><div class="energy-fill" id="energyFill"></div></div>
+    <div id="dragHint">✋</div>
+    
+    <div id="controls">
+        <button id="btnReset">Reset</button>
+        <button id="btnPause">Pause</button>
+        <button id="btnTrails">Trails</button>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>

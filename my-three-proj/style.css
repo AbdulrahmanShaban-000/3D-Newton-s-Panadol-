@@ -1,0 +1,109 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    overflow: hidden; 
+    background: #020205; 
+    font-family: 'Segoe UI', sans-serif;
+    user-select: none;
+}
+
+#info {
+    position: absolute; 
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    color: #ccd6f6; 
+    font-size: 15px;
+    text-align: center; 
+    pointer-events: none; 
+    z-index: 10;
+    background: rgba(10, 15, 40, 0.7);
+    padding: 14px 28px;
+    border-radius: 14px;
+    border: 1px solid rgba(100, 150, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#controls {
+    position: absolute; 
+    bottom: 25px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    display: flex; 
+    gap: 10px; 
+    z-index: 10;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4a6cf7, #8b5cf6);
+    color: #fff; 
+    font-weight: 600; 
+    cursor: pointer;
+    transition: all 0.25s ease; 
+    font-size: 13px;
+    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+button:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 25px rgba(74, 108, 247, 0.4); 
+}
+
+button:active { 
+    transform: translateY(0); 
+}
+
+#debug {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #667788;
+    font-size: 11px;
+    text-align: right;
+    pointer-events: none;
+    font-family: 'Courier New', monospace;
+    line-height: 1.8;
+}
+
+.energy-bar {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.energy-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4a6cf7, #8b5cf6);
+    transition: width 0.1s;
+    border-radius: 2px;
+}
+
+#dragHint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 48px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
